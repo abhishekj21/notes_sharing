@@ -1,0 +1,51 @@
+{% load static %}
+{% include 'admin_navigation.html' %}
+
+<style>
+        .anim{
+    widht:100%;
+    background:white;
+    height:180px;
+    animation:demo 1s infinite alternate;
+    box-shadow:0 0 10px 20px yellow;
+    }
+    @keyframes demo{
+    0%{border-radius:0%;}
+    100%{border-radius:100%;}
+    }
+    .anim2{
+    position:absolute;
+    left:250px;
+    top:40px;
+    box-sizing:border-box;
+    animation:demo1 1s infinite alternate;
+    }
+    @keyframes demo1{
+    0%{font-size:20px;}
+    100%{font-size:35px;font-weight:bold;color:green;text-shadow:0 10px  40px cyan;}
+    }
+</style>
+
+<div class="container-fluid" style="border:2px solid blue;">
+    <div class="row">
+        <div class="col col-8" style="background:#E0FFFF;">
+            <div class="row">
+                <div class="col-1 abc"></div>
+                <div class="col-5 abc" style="margin-top:80px;"><a style="width:250px;font-size:30px;" href="{% url 'view_que_admin' %}" class="btn btn-primary ab">Bugs & Answers</a></div>
+                <div class="col-5 abc" style="margin-top:80px;"><a style="width:250px;font-size:30px;" href="{% url 'add_que_admin' %}" class="btn btn-primary ab">Your Problem</a></div>
+            </div>
+            <div class="row" style="margin-top:70px;">
+                <div class="col-12 container anim"><span class="anim2">Knowledge IS A Key OF Success <br>Share Your Knowledge Here</span></div>
+            </div>
+            <div class="row" style="margin-top:70px;">
+
+
+            </div>
+        </div>
+        <div class="col col-4" style=" padding:0px;">
+            <img src="{% static 'notes1.png' %}" style="width:100%; height:400px;">
+        </div>
+     </div>
+</div>
+
+{% include 'footer.html' %}

@@ -1,0 +1,63 @@
+{% load static %}
+
+{% include 'navigation.html' %}
+
+<style>
+    .bg-img{
+        background-image: url(https://t4.ftcdn.net/jpg/05/47/70/09/360_F_547700907_P1LinRrXfbZFODm0GC9x1X450AUrz2qW.jpg);
+        background-size: 100% 100%;
+    }
+    .feedback-main{
+        background: rgba(127, 204, 249, 0.89);
+        padding: 20px 60px;
+
+    }
+</style>
+
+<div class="row m-auto justify-content-center bg-img">
+    <div class="col-5 feedback-main">
+        <form class="" method="post">
+            <marquee behavior="alternate" style="font-family: 'Monotype Corsiva'; font-size:25px; color:darkcyan; background-color:black; font-weight:bold; margin-top:1%">
+                Feedback Form
+        </marquee>
+            {% csrf_token %}
+            <label><b>Full Name:</b></label>
+            <input type="text" class="form-control" name="fname" required="true" placeholder="Write your name">
+        
+            <label><b>Phone Number:</b></label>
+            <input type="text" class="form-control" name="fphone" required="true" placeholder="Write your Contact Number">
+        
+            <label><b>Email Address:</b></label>
+            <input type="email" class="form-control" name="femail" required="true" placeholder="Write your Email">
+        
+            <label><b>Feedback:</b></label>
+            <input type="text" class="form-control" name="fcomment" required="true" placeholder="Write your valuable feedback">
+        <center>
+            <input type="submit" class="btn btn-primary" style="margin-top:2%; color:darkcyan; background-color:black ; height:50px; font-size:25px">
+        </center>
+        </form>
+    </div>
+</div>
+
+
+{% if error == "no" %}
+<script>
+    alert("Feedback Submitted Successfully")
+    window.location = ("{% url 'feedback' %}")
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert("Something went wrong, Try Again")
+</script>
+{% endif %}
+
+{% if error == "not" %}
+<script>
+    alert("Your Current Password is wrong")
+</script>
+{% endif %}
+
+
+{% include 'footer.html' %}

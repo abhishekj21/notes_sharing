@@ -1,0 +1,38 @@
+{% load static %}
+{% include 'user_navigation.html' %}
+
+<style>
+    .abc{
+        padding:30px;
+        height:50px;
+    }
+    .ab{
+        height:70px;
+        line-height:50px;
+        width:150px;
+        font-size:30px;
+    }
+
+</style>
+<div class="container-fluid" style="border:2px solid blue;">
+    <div class="row">
+        <div class="col col-8" style="background:#E0FFFF;">
+            <div class="row">
+                <div class="col-1 abc"></div>
+                <div class="col-4 abc" style="margin-top:80px;"><a href="{% url 'view_que_user' %}" class="btn btn-primary ab" >Python</a></div>
+                <div class="col-4 abc" style="margin-top:80px;"><a href="{% url 'view_que_user' %}" class="btn btn-primary ab" >Java</a></div>
+                <div class="col-3 abc" style="margin-top:80px;"><a href="{% url 'view_que_user' %}" class="btn btn-primary ab" >Dot Net</a></div>
+            </div>
+            <div class="row" style="margin-top:10px;">
+                <div class="col-1 abc"></div>
+                <div class="col-4 abc" style="margin-top:80px;"><a href="#" class="btn btn-primary ab">HTML</a></div>
+                <div class="col-4 abc" style="margin-top:80px;"><a href="#" class="btn btn-primary ab">CSS</a></div>
+                <div class="col-3 abc" style="margin-top:80px;"><a href="#" class="btn btn-primary ab">PHP</a></div>
+            </div>
+        </div>
+        <div class="col col-4" style=" padding:0px;">
+            <img src="{% static 'notes1.png' %}" style="width:100%; height:400px;">
+        </div>
+     </div>
+</div>
+

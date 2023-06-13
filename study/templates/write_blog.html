@@ -1,0 +1,25 @@
+{% include 'user_navigation.html' %}
+
+<form method="post">
+    {% csrf_token %}
+
+<div class="container-fluid" style="border:2px solid blue;min-height:500px;max-height:1000px;">
+    <div class="container">
+        <div class="row" style="margin-top:50px;">
+            <div class="col" style="font-size:20px;">
+                    <b>Topic : </b><input type="text" class="form-control" placeholder="Write Your Blog Topic here..." name="btopic">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="margin-top:20px; font-size:20px;">
+                <textarea style="resize:none;" name="blog" id="" cols="120" rows="7" placeholder="Type your blog content here........"></textarea>
+            </div>
+        </div>
+        <div>
+            <center>
+                <button class="btn btn-primary" style="width:350px;margin-top:30px;font-size:30px;">Submit</button>
+            </center>
+        </div>
+    </div>
+</div>
+</form>

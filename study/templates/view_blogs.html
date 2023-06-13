@@ -1,0 +1,16 @@
+{% include 'user_navigation.html' %}
+
+<div class="container-fluid" style="padding:30px 0 0 60px;width:100%;background:lightgreen;margin-top:0px;min-height:450px;max-height:4000px;">
+    {% for i in data %}
+    <div style="font-size:30px;font-weight:bold;color:blue;">
+        <span style="color:green;">Topic : {{i.topic}}</span><br>
+        <u style="font-size:25px;font-style:italic;">User : {{i.user}}</u><br>
+
+    </div>
+        <span style="font:30px bold;color:black;"><u>Content :</u></span>
+    <div class="container">
+        <span style="font-size:22px;">{{i.blogc}}</span>
+    </div>
+    <hr>
+    {% endfor %}
+</div>

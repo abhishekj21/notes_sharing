@@ -1,0 +1,22 @@
+{% load static %}
+{% include 'navigation.html' %}
+<style>
+    .abc{
+    height:370px;
+    background-image:url(static/pic1.png);
+    background-size:100% 100%;
+    animation:base 10s infinite;
+    }
+    @keyframes base{
+    20%{background-image:url(static/pic2.jpg)}
+    40%{background-image:url(static/pic3.jpg)}
+    60%{background-image:url(static/pic4.png)}
+    80%{background-image:url(static/pic5.jpeg)}
+    100%{background-image:url(static/pic6.jpg)}
+    }
+</style>
+<div class="container-fluide abc">
+
+</div>
+{% include 'footer.html' %}
+<a name="down"></a>

@@ -1,0 +1,87 @@
+<html>
+<head>
+    {% load static %}
+    <title>Study Material</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0da782d01f.js" crossorigin="anonymous"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.nav-link{
+    color:green !important;
+    margin-right: 4px;
+    transition: all .4s;
+    }
+
+.nav-link:hover{
+    color:yellow !important;
+    background-color:green;
+    border-radius:10px;
+    }
+
+.navbar-brand:hover{
+    color:red !important;
+    }
+
+</style>
+</head>
+<body>
+
+<div >
+    <div class="row m-auto">
+        <div class="col-sm-3 ">
+                  <img src="{% static 'notes1.png' %}" width="380px" height="150px" title="Room Booking">
+        </div>
+
+        <div class="col-sm-6 mt-5 text-center">
+                  <span style="font-weight: bold; font-size:35px">
+                        <span style="color:red">Online Bug</span>
+                        <span style="color:green">Fixing System</span>
+                  </span>
+        </div>
+
+        <div class="col-sm-3 mt-4" style="padding-left:0%">
+            <span style=" font-size:40px">
+                <span><a href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter pl-2"></i></a></span>
+                <span><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin pl-2"></i></a></span>
+                <span><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram pl-2"></i></a></span>
+                <span><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook pl-2"></i></a></span>
+                <span><a href="https://www.google.com/" target="_blank"><i class="fa fa-google pl-2"></i></a></span>
+            </span>
+        </div>
+
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-sm" style="background-color:yellow">
+    <a class="navbar-brand text-red pl-5 font-weight" style="margin-right:auto;font-family:'elephant'; font-size:30px">Welcome {{user.first_name}}</a>
+
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'user_home' %}"><i class="fa fa-home mr-2"></i>Home</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'view_que_user' %}"><i class="fa fa-users mr-1"></i>View Questions</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'view_blogs' %}"><i class="fa fa-admin mr-1"></i>View Blog</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'write_blog' %}"><i class="fas fa-bold mr-1"></i>Write Blog</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-user-plus mr-1"></i>Logout</a>
+    </li>
+</ul>
+</nav>
+</body>
+</html>
